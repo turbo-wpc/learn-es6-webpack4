@@ -3,7 +3,7 @@
 // async 函数内部return语句返回的值，会成为then方法回调函数的参数
 // async 函数返回的 Promise 对象，必须等到内部所有await命令后面的 Promise 对象执行完，才会发生状态改变，除非遇到return语句或者抛出错误
 // 也就是说，只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数
-// 而async 函数内部抛出错误时，会导致返回的 Promise 对象变为reject状态，由catch方法回调函数接收抛出的错误对象
+// 而async 函数内部抛出错误时，会导致返回的 Promise 对象变为reject状态，由catch方法回调函数接收抛出的错误对象(无需return)
 
 // node1！：正常情况下，await命令后面是一个 Promise 对象
 //        此时，await语句的值就是resolve回调的参数: resolve(value)，即Promise对象 then中回调函数能获取到的值
